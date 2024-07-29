@@ -21,21 +21,22 @@ void main() {
     String? nome = stdin.readLineSync();
 
     if (nome == null || nome.isEmpty) {
-      throw Exception("Nome inválido! Por favor, insira um nome válido.");
+      throw Exception("Nome inválido. Por favor, insira um nome válido.");
     }
 
     print("Digite o peso (em kg):");
     double peso = double.parse(stdin.readLineSync()!);
 
     if (peso <= 0) {
-      throw ArgumentError("Peso inválido! O peso deve ser maior que zero.");
+      throw ArgumentError("Peso inválido. O peso deve ser maior que zero.");
     }
 
-    print("Digite a altura (em metros):");
-    double altura = double.parse(stdin.readLineSync()!);
+    print("Digite a altura (em metros, use ponto ou vírgula):");
+    String inputAltura = stdin.readLineSync()!.replaceAll(',', '.');
+    double altura = double.parse(inputAltura);
 
     if (altura <= 0) {
-      throw ArgumentError("Altura inválida! A altura deve ser maior que zero.");
+      throw ArgumentError("Altura inválida. A altura deve ser maior que zero.");
     }
 
     Pessoa pessoa = Pessoa(nome, peso, altura);
