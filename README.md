@@ -10,10 +10,15 @@ Aplicação para calcular o IMC (Índice de Massa Corporal) de uma pessoa utiliz
 ✔ Printar na tela o resultado do cálculo​  
 ✔ Testes​
 
+<<<<<<< HEAD
 <b>version: 1.0.2</b>  
 ✔ Tratamento de Exceções
 
 <b> Em Andamento </b>
+=======
+<b> Em Andamento </b>
+- Tratar exceções​
+>>>>>>> 6b918e22e9ce3cfc913c2f7cf234b7e7807f4233
 - Tratar o resultado de acordo com a tabela:
 
 | IMC       | Classificação      |
