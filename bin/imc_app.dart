@@ -33,6 +33,13 @@ void main() {
 
     print("Digite a altura (em metros, use ponto ou vírgula):");
     String inputAltura = stdin.readLineSync()!.replaceAll(',', '.');
+
+    // Verifica se a string contém apenas dígitos e um ponto
+    if (!RegExp(r'^[0-9]+(\.[0-9]+)?$').hasMatch(inputAltura)) {
+      throw FormatException(
+          "Altura inválida. Insira um valor numérico válido.");
+    }
+
     double altura = double.parse(inputAltura);
 
     if (altura <= 0) {
