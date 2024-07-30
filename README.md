@@ -3,7 +3,7 @@
 
 Aplicação para calcular o IMC (Índice de Massa Corporal) de uma pessoa utilizando a linguagem Dart e o Flutter. 
 
-#### Checklist do Desafio
+#### Checklist Inicial
 ✔ Criar classe Pessoa (Nome / Peso / Altura)​  
 ✔ Ler dados do terminal​  
 ✔ Calcular IMC  
@@ -13,8 +13,8 @@ Aplicação para calcular o IMC (Índice de Massa Corporal) de uma pessoa utiliz
 <b>version: 1.0.2</b>  
 ✔ Tratamento de Exceções
 
-<b> Em Andamento </b>
-- Tratar o resultado de acordo com a tabela:
+<b>version: 1.0.3</b>
+✔ Tratar o resultado de acordo com a tabela:
 
 | IMC       | Classificação      |
 |-----------|--------------------|
@@ -26,3 +26,5 @@ Aplicação para calcular o IMC (Índice de Massa Corporal) de uma pessoa utiliz
 | 30 < 35   | Obesidade Grau I   |
 | 35 < 40   | Obesidade Grau II  |
 | >= 40     | Obesidade Grau III |
+
+✔ Testes​

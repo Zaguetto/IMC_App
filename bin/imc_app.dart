@@ -13,6 +13,26 @@ class Pessoa {
     }
     return peso / (altura * altura);
   }
+
+  String classificarIMC(double imc) {
+    if (imc < 16) {
+      return "Magreza Grave";
+    } else if (imc < 17) {
+      return "Magreza Moderada";
+    } else if (imc < 18.5) {
+      return "Magreza Leve";
+    } else if (imc < 25) {
+      return "Saudável";
+    } else if (imc < 30) {
+      return "Sobrepeso";
+    } else if (imc < 35) {
+      return "Obesidade Grau I";
+    } else if (imc < 40) {
+      return "Obesidade Grau II";
+    } else {
+      return "Obesidade Grau III";
+    }
+  }
 }
 
 void main() {
@@ -33,13 +53,6 @@ void main() {
 
     print("Digite a altura (em metros, use ponto ou vírgula):");
     String inputAltura = stdin.readLineSync()!.replaceAll(',', '.');
-
-    // Verifica se a string contém apenas dígitos e um ponto
-    if (!RegExp(r'^[0-9]+(\.[0-9]+)?$').hasMatch(inputAltura)) {
-      throw FormatException(
-          "Altura inválida. Insira um valor numérico válido.");
-    }
-
     double altura = double.parse(inputAltura);
 
     if (altura <= 0) {
@@ -48,8 +61,10 @@ void main() {
 
     Pessoa pessoa = Pessoa(nome, peso, altura);
     double imc = pessoa.calcularIMC();
+    String classificacao = pessoa.classificarIMC(imc);
 
     print("O IMC de ${pessoa.nome} é: $imc");
+    print("Classificação: $classificacao");
   } on FormatException catch (e) {
     print("Erro de formatação: $e");
   } on ArgumentError catch (e) {
